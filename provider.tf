@@ -6,8 +6,6 @@ terraform {
       version = "=3.0.0"
     }
   }
-}
-
 
 backend "azurerm" {
     resource_group_name  = "terrastore"  # Can be passed via `-backend-config=`"resource_group_name=<resource group name>"` in the `init` command.
@@ -15,7 +13,7 @@ backend "azurerm" {
     container_name       = "tfstate"                       # Can be passed via `-backend-config=`"container_name=<container name>"` in the `init` command.
     key                  = "prod.terraform.tfstate"        # Can be passed via `-backend-config=`"key=<blob key name>"` in the `init` command.
   }
-
+}
 
 # The resource block defines the type of resource we want to work with
 # The name and location are arguements for the resource block
